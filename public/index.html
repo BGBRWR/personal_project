@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <title>Tesla Clone x Austin Walker</title>
+		<link rel="icon" href="./assets/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="./assets/style/reset.css" rel="stylesheet">
+    <link href="./assets/style/style.css" rel="stylesheet">
+    <link href="./assets/style/home.css" rel="stylesheet">
+    <link href="./assets/style/footer.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+  <main>
+    <ui-view ></ui-view>
+  </main>
+
+    <script src="app/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.js"></script>
+
+    <!-- Google Map Scripts -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaz79q-glRlhJkPKScG9xGrnhKNjURUAU&libraries=places"></script>
+
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/component/map/map.controller.js"></script>
+    <script type="text/javascript" src="app/component/map/map.service.js"></script>
+    <script type="text/javascript" src="app/component/shop/shop.controller.js"></script>
+    <script type="text/javascript" src="app/component/shop/shop.service.js"></script>
+
+    <script type="text/javascript" src="app/component/routing/routes.js"></script>
+    <script type="text/javascript" src="app/component/directives/infopane.js"></script>
+
+    <script type="text/javascript" src="app/component/directives/header.js"></script>
+    <script type="text/javascript" src="app/component/directives/fixed_header.js"></script>
+
+    <script type="text/javascript" src="app/component/directives/shop_header.js"></script>
+    <script type="text/javascript" src="app/component/directives/shop_footer.js"></script>
+    <script type="text/javascript" src="app/component/design_studio/design.controller.js"></script>
+    <script type="text/javascript" src="app/component/design_studio/checkout.controller.js"></script>
+    <script type="text/javascript" src="app/component/design_studio/design.service.js"></script>
+    <script type="text/javascript" src="app/component/directives/cars_orders.js"></script>
+    <script type="text/javascript" src="app/component/design_studio/design.factory.js"></script>
+    <script type="text/javascript" src="app/component/design_studio/personal.controller.js"></script>
+    <script type="text/javascript" src="app/component/login/login.controller.js"></script>
+    <script type="text/javascript" src="app/component/directives/animations.js"></script>
+    <script type="text/javascript" src="app/component/design_studio/checkout.js"></script>
+
+  </body>
+</html>

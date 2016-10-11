@@ -1,0 +1,108 @@
+/*.video-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+}*/
+
+.homeContainer {
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.video-container {
+    position: fixed;
+    z-index: -9999;
+    top: 0;
+}
+
+.home-img {
+    width: 100%;
+    background: center;
+    height: -20;
+}
+
+.section-software {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding-top: 16vh;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    min-height: 31.25rem;
+    height: 80vh;
+}
+
+#some-wrapper {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#line-1 {
+    font-family: Gotham Light, "M Hei PRC W45", "M Hei HK W42", "M Hei HK W40", "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    line-height: 60px;
+    color: #fff;
+}
+
+#line-2 {
+    margin-top: 0.6rem;
+    margin-bottom: 1.375rem;
+    color: #fff;
+    font-size: 16px;
+}
+
+.alt-link--fancy {
+    font-family: Raleway, "M Hei PRC W45", "M Hei HK W42", "M Hei HK W40", "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #fff;
+    text-shadow: 2px 0 0 transparent;
+    background-image: linear-gradient(transparent 92%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0.5) 100%, transparent 100%);
+}
+
+.alt-link--fancy:hover {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 0 0 transparent;
+    background-image: linear-gradient(transparent 92%, #fff 92%, #fff 100%, transparent 100%);
+}
+
+.alt-link {
+    color: #fff;
+}
+
+.alt-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+#buttons {
+    margin: 0.5rem 0;
+    font-weight: normal;
+    height: 2rem;
+}
+
+.button {
+    margin: 0.25rem 0.125rem;
+    font-family: Montserrat, "M Hei PRC W45", "M Hei HK W42", "M Hei HK W40", "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 0.75rem 1.25rem 0.625rem;
+    min-width: 175px;
+    font-size: 13px;
+    border: 1px solid transparent;
+}
+
+#buttons a {
+    text-decoration: none;
+    margin-left: .25rem;
+    margin-right: .25rem;
+}
+
+.button:hover {
+    border: 1px solid white;
+    transition: all 0.3s ease-in-out;
+}

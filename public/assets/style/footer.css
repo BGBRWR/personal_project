@@ -1,0 +1,41 @@
+footer #footer {
+    text-align: left;
+    padding-bottom: 13px;
+}
+
+.colophon {
+    text-align: center;
+    clear: both;
+    color: #666;
+    margin: 0;
+    font-size: 16px;
+    font-family: Montserrat
+}
+
+#footer a:after {
+    padding-left: 15px;
+    padding-left: 0.9375rem;
+    padding-right: 13px;
+    padding-right: 0.8125rem;
+    display: inline;
+    content: "\2022";
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#footer a {
+    padding-left: 0;
+    margin-left: 0;
+    border-left: 0;
+    color: #ccc;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    font-size: .8em;
+}
+
+#flag {
+    width: 20px;
+    margin-bottom: -5px;
+}
