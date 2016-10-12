@@ -9,8 +9,8 @@ INSERT INTO paints (color, color_url, color_price) values ('Solid Black', './ass
 INSERT INTO paints (color, color_url, color_price) values ('Solid White', './assets/img/design-shop/paint/solidwhite.png', 0);
 INSERT INTO paints (color, color_url, color_price) values ('Titanium Metallic', './assets/img/design-shop/paint/titaniummetallic.png', 1000);
 INSERT INTO paints (color, color_url, color_price) values ('Midnight Silver Metallic', './assets/img/design-shop/paint/midnightsilver.png', 1000);
-INSERT INTO paints (color, color_url, color_price) values ('Obsidian Black Metallic', './assets/img/design-shop/paint/obsidian.png', 1000);
-INSERT INTO paints (color, color_url, color_price) values ('Deep Blue Metallic', './assets/img/design-shop/paint/bluemetal.png', 1000);
+INSERT INTO paints (color, color_url, color_price) values ('Obsidian Black Metallic', '../assets/img/design-shop/paint/obsidian.png', 1000);
+ISERT INTO paints (color, color_url, color_price) values ('Deep Blue Metallic', './assets/img/design-shop/paint/bluemetal.png', 1000);
 INSERT INTO paints (color, color_url, color_price) values ('Silver Metallic', './assets/img/design-shop/paint/silvermetallic.png', 1000);
 INSERT INTO paints (color, color_url, color_price) values ('Pearl White Mulit-Coat', './assets/img/design-shop/paint/specialwhite.png', 1500);
 INSERT INTO paints (color, color_url, color_price) values ('Red Multi-Coat', './assets/img/design-shop/paint/red.png', 1500);

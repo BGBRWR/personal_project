@@ -64,7 +64,7 @@ angular.module('app')
         $scope.tires.img = response[0].rim_url;
         $scope.customCar.carWheels.rims = response[0].style;
         $scope.customCar.carWheels.price = response[0].rim_price;
-        $scope.customCar.options.rim_id = style;
+        $scope.customCar.options.rim_id = type;
         $scope.calculateCost();
       });
     };
