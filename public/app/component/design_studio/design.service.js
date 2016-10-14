@@ -4,9 +4,7 @@ angular.module('app')
       return $http({
         method: 'GET',
         url: '/changeBattery/' + battery
-      }).then(function(response){
-        return response.data;
-      })
+      });
     };
     this.updateBody = function (color) {
         return $http({
@@ -33,7 +31,6 @@ angular.module('app')
         method: 'GET',
         url: '/changeRoof/' + roof
       }).then(function(response) {
-        console.log(response);
         return response.data;
       });
     };
@@ -72,6 +69,7 @@ angular.module('app')
         url: '/checkout',
         data: order
       }).then(function(response) {
+        console.log(response);
         return response.data[0].order_id;
       });
     };

@@ -4,12 +4,12 @@ angular.module('app')
     $scope.getChargers = function() {
       mapsSrvc.getAllLocations().then(function(response) {
         for (var i = 0; i < response.length; i++) {
-          response[i].gps = response[i].gps.split(', ')
+          response[i].gps = response[i].gps.split(', ');
         }
         $scope.location = response;
         $scope.initMap();
-      })
-    }
+      });
+    };
 
     $scope.initMap = function() {
       $scope.icon = {
@@ -23,7 +23,7 @@ angular.module('app')
           center: {lat: 39.8333333, lng: -98.585522},
           zoom: 5,
           mapTypeControl: false,
-          streetViewControl: false,
+          streetViewControl: true,
           zoomControlOptions: {
             position: google.maps.ControlPosition.RIGHT_CENTER
           },
@@ -55,7 +55,7 @@ angular.module('app')
       $scope.options = {
         types: ['(cities)'],
         componentRestrictions: {country: 'us'}
-      }
+      };
       $scope.autoComplete = new google.maps.places.Autocomplete($scope.input, $scope.options);
       $scope.autoComplete.bindTo('bounds', $scope.map);
 
@@ -101,8 +101,18 @@ angular.module('app')
          $scope.infowindow.setContent('<div><strong>' + $scope.place.name + '</strong><br>' + $scope.address);
          $scope.infowindow.open($scope.map, $scope.marker1);
 
-      })
+      });
 
+      var show = function() {
+        $scope.station = this.info;
+        if($('.info-pane').is(':hidden')) {
+          jQuery('.info-pane').show();
+        }
+        $scope.map.setZoom(8);
+        $scope.latLng = new google.maps.LatLng(this.info.gps[0], this.info.gps[1]);
+        $scope.map.setCenter($scope.latLng);
+        $scope.$apply();
+      };
 
       for (var i = 0; i < $scope.location.length; i++){
         $scope.latLng = new google.maps.LatLng($scope.location[i].gps[0], $scope.location[i].gps[1]);
@@ -112,18 +122,9 @@ angular.module('app')
           icon: $scope.icon
         });
         $scope.marker.info = $scope.location[i];
-        $scope.marker.addListener('click', function() {
-          $scope.station = this.info;
-          if($('.info-pane').is(':hidden')) {
-            jQuery('.info-pane').show();
-          }
-          $scope.map.setZoom(8);
-          $scope.latLng = new google.maps.LatLng(this.info.gps[0], this.info.gps[1])
-          $scope.map.setCenter($scope.latLng);
-          $scope.$apply();
-        })
+        $scope.marker.addListener('click', show);
       }
-    }
+    };
 
     $scope.getChargers();
-})
+});

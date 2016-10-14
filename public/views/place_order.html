@@ -1,4 +1,4 @@
-<section class="car_container">
+<section class="car_container" ng-keyup="enterKey($event)">
 
 <fixed-header>
 </fixed-header>
@@ -106,7 +106,7 @@
 
   <section class="order_line order_main_content">
       <p>By placing this order you agree to the <a>Model S Order Agreement</a></p>
-      <button ng-click="passInfo(cust)">Continue</button>
+      <button ng-click="passInfo()">Continue</button>
   </section>
 
 

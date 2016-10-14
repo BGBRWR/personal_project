@@ -19,11 +19,11 @@ angular.module('app')
       $scope.total = $scope.total.join('');
     };
 
-    $scope.total = 53000;
+    $scope.total = 62000;
     $scope.monetize();
 
     $scope.customCar = {
-      carType: {model: 't60', price: 53000},
+      carType: {battery: '60D', price: 71000},
       carColor: {paint: 'Solid White', price: 0},
       carWheels: {rims: '19" Silver Slipstream Wheels',price: 0},
       carRoof: {roof: 'Body', price: 0},
@@ -38,14 +38,14 @@ angular.module('app')
     };
 
     $scope.calculateCost = function() {
-      $scope.total = $scope.customCar.carType.price + $scope.customCar.carColor.price + $scope.customCar.carWheels.price + $scope.customCar.carRoof.price + $scope.customCar.headliner.price + $scope.customCar.seats.price + $scope.customCar.decor.price;
+      $scope.total = $scope.customCar.carType.price + $scope.customCar.carColor.price + $scope.customCar.carWheels.price + $scope.customCar.carRoof.price + $scope.customCar.headliner.price + $scope.customCar.seats.price + $scope.customCar.decor.price - 7500 - 1500;
       $scope.monetize();
     };
     $scope.battery = function(battery){
       designSrvc.updateBat(battery).then(function(response) {
-        $scope.customCar.carType.model = response[0].model;
-        $scope.customCar.carType.price = response[0].model_price;
-        $scope.customCar.options.model_id = model;
+        $scope.customCar.carType.battery = response.data[0].battery;
+        $scope.customCar.carType.price = response.data[0].battery_price;
+        $scope.customCar.options.model_id = battery;
         $scope.calculateCost();
       });
     };

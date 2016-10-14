@@ -2,7 +2,7 @@ var app = require('../../index.js');
 var db = app.get('db');
 module.exports = {
     changeBattery: function(req, res, next) {
-      db.get_car_battery(function(err, batterySize){
+      db.get_car_battery([req.params.id], function(err, batterySize){
         res.send(batterySize);
       });
     },
@@ -47,7 +47,8 @@ module.exports = {
       });
     },
     createOrder: function(req, res, next) {
-      db.create_order([req.body.color_id, req.body.rim_id, req.body.roof_id, req.body.seat_id, req.body.liner_id, req.body.decor_id], function(err, order) {
+      console.log(req.body);
+      db.create_order([req.body.model_id, req.body.rim_id, req.body.color_id, req.body.roof_id, req.body.liner_id, req.body.seat_id, req.body.decor_id], function(err, order) {
         res.send(order);
       });
     },
@@ -69,7 +70,7 @@ module.exports = {
       });
     },
     getCar: function(req, res, next) {
-      db.get_car([req.query.rim_id, req.query.color_id, req.query.roof_id, req.query.liner_id, req.query.seat_id, req.query.decor_id], function(err, car) {
+      db.get_car([req.query.model_id, req.query.rim_id, req.query.color_id, req.query.roof_id, req.query.liner_id, req.query.seat_id, req.query.decor_id], function(err, car) {
         res.send(car);
       });
     }

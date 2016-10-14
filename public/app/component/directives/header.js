@@ -6,8 +6,6 @@ return {
   templateUrl: 'app/component/directives/templates/header.html',
   controller: function($scope, $state, $rootScope){
     $scope.containerClass = $rootScope.containerClass;
-    console.log($rootScope);
-
   },
   link: function(scope, element, attrs){
     scope.show = false;

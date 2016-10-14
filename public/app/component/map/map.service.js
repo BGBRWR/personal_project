@@ -7,6 +7,6 @@ angular.module('app')
       url: '/chargers'
     }).then(function(response) {
       return response.data;
-    })
-  }
-})
+    });
+  };
+});

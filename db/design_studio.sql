@@ -1,3 +1,15 @@
+CREATE TABLE batteries (
+  battery_id SERIAL PRIMARY KEY,
+  battery varchar(50),
+  battery_price int
+);
+
+INSERT INTO batteries (battery, battery_price) values ('60D', 71000);
+INSERT INTO batteries (battery, battery_price) values ('70D', 79500);
+INSERT INTO batteries (battery, battery_price) values ('90D', 89500);
+INSERT INTO batteries (battery, battery_price) values ('P100D', 134500);
+
+
 CREATE TABLE paints (
   color_id SERIAL PRIMARY KEY,
   color varchar(50),
@@ -76,6 +88,7 @@ INSERT INTO seats (seat, seat_url, seat_mid_url, seat_price) values('Black Next 
 
 CREATE TABLE orders (
   order_id SERIAL PRIMARY KEY,
+  model_id int REFERENCES batteries,
   rim_id int REFERENCES rims,
   color_id int REFERENCES paints,
   roof_id int REFERENCES roof,

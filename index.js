@@ -26,6 +26,7 @@ var chargers = require('./server/controllers/chargerCtrl.js');
 
 
 app.get('/chargers', chargers.getChargeLocations);
+app.get('/changeBattery/:id', chargers.changeBattery);
 app.get('/product', chargers.getAllProduct);
 app.get('/customize/:id', chargers.customizeCar);
 app.get('/changeWheel/:id', chargers.changeWheel);
@@ -40,9 +41,6 @@ app.get('/changeSeats/:id', chargers.changeSeats);
 
 app.post('/checkout', chargers.createOrder);
 app.post('/createCustomer', chargers.createCustomer);
-
-
-
 
 
 app.listen(config.port, function() {
