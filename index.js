@@ -3,8 +3,9 @@ var session = require('express-session');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var massive = require('massive');
-var connectionString = 'postgres://postgres@localhost/tesla';
 var config = require("./server/config");
+var connectionString = config.connectionString;
+
 
 
 var massiveInstance = massive.connectSync({connectionString: connectionString});
