@@ -136,29 +136,25 @@
         </div>
 
         <div class="custom_top_section">
-            <div class="custom_t custom_top_left" ng-hide="hidecontrols"></div>
-            <div class="custom_t mid custom_top_mid" ng-hide="hidecontrols"></div>
-            <div class="custom_t custom_top_right" ng-hide="hidecontrols"></div>
+            <div class="custom_t custom_top_left" ng-hide="hidecontrols" ng-click="showcolors=true; hidecontrols=true; showrims=false; showinterior=false; showexterior=false; showinside=false"></div>
+            <div class="custom_t mid custom_top_mid" ng-hide="hidecontrols" ng-click="showrims=true; hidecontrols=true; showcolors=false; showinterior=false; showexterior=false; showinside=false"></div>
+            <div class="custom_t custom_top_right" ng-hide="hidecontrols" ng-click="showinterior=true; hidecontrols=true; showcolors=false; showrims=false; showinterior=true; showexterior=true; showinside=true"></div>
         </div>
 
         <div class="custom_bar">
             <div class="text" >
 
             </div>
-            <div class="custom" ng-click="showcolors=true; hidecontrols=true; showrims=false; showinterior=false; showexterior=false; showinside=false">Paint</div>
-            <div class="custom mid" ng-click="showrims=true; hidecontrols=true; showcolors=false; showinterior=false; showexterior=false; showinside=false">Wheels & Roof</div>
-            <div class="custom" ng-click="showinterior=true; hidecontrols=true; showcolors=false; showrims=false; showinterior=true; showexterior=true; showinside=true">Interior</div>
+            <div class="custom 1" ng-click="showcolors=true; hidecontrols=true; showrims=false; showinterior=false; showexterior=false; showinside=false">Paint</div>
+            <div class="custom mid 2" ng-click="showrims=true; hidecontrols=true; showcolors=false; showinterior=false; showexterior=false; showinside=false">Wheels & Roof</div>
+            <div class="custom 3" ng-click="showinterior=true; hidecontrols=true; showcolors=false; showrims=false; showinterior=true; showexterior=true; showinside=true">Interior</div>
         </div>
 
     </section>
 
     <section class="fixed_size main_content">
         <div class="left_column">
-            <div class="options">
-                Select options for
-                <button>Max Range</button>
-                <button>Max Performance</button>
-            </div>
+
 
             <div class="select_performance">
 
@@ -169,7 +165,7 @@
                     <hr>
                     <ul>
                         <li>
-                            <span class="bold">210</span>
+                            <span class="bold">218</span>
                             miles range (EPA est.)</li>
                         <li>
                             <span class="bold">130</span>
@@ -188,7 +184,7 @@
                     <hr>
                     <ul>
                         <li>
-                            <span class="bold">249</span>
+                            <span class="bold">259</span>
                             miles range (EPA)</li>
                         <li>
                             <span class="bold">140</span>
@@ -212,7 +208,7 @@
                             <span class="bold">15</span>
                             mph top speed</li>
                         <li>
-                            <span class="bold">4.2</span>sec. 0-60 mph</li>
+                            <span class="bold">4.2</span> sec. 0-60 mph</li>
                     </ul>
                 </div>
 
@@ -223,17 +219,14 @@
                     <hr>
                     <ul>
                         <li>
-                            <span class="bold">270</span>
+                            <span class="bold">315</span>
                             miles range (EPA)</li>
                         <li>
                             <span class="bold">155</span>
                             mph top speed</li>
                         <li>
-                            <span class="bold">4.2</span>
+                            <span class="bold">2.5</span>
                             sec. 0-60 mph</li>
-                        <li>
-                            <span class="bold">2.8</span>
-                            sec. with Ludicrous Speed Upgrade</li>
                     </ul>
                 </div>
 

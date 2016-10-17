@@ -17,6 +17,22 @@ angular.module('app')
             $('.custom').removeClass('custom_border');
             $(this).addClass('custom_border');
           });
+          $('.custom_t.custom_top_left').on('click', function() {
+            $('.custom_t').removeClass('custom_border');
+            $('.custom.1').addClass('custom_border');
+          });
+          $('.custom_t.mid.custom_top_mid').on('click', function() {
+            $('.custom_t').removeClass('custom_border');
+            $('.custom.mid.2').addClass('custom_border');
+          });
+          $('.custom_t.custom_top_right').on('click', function() {
+            $('.custom_t').removeClass('custom_border');
+            $('.custom.3').addClass('custom_border');
+          });
+          $('.close_customizer').on('click', function() {
+            $('.custom').removeClass('custom_border');
+            $('.custom_t').removeClass('custom_border');
+          });
           $('.pick_a_color li').on('click', function() {
             var color = $(this).val();
             if($('.under_text h4').is(':visible')) {
