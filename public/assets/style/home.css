@@ -1,11 +1,7 @@
-/*.video-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -100;
-}*/
+.home-header broad-header .header {
+    background-color: rgba(255, 0, 0, 0);
+    opacity: 1;
+}
 
 .homeContainer {
     background-color: rgba(255, 0, 0, 0);
